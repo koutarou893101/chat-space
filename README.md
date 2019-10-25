@@ -71,6 +71,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :groups
+
 - belongs_to :user
 
 
