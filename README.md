@@ -70,7 +70,7 @@ Things you may want to cover:
 |image|string|
 
 ### Association
-- belongs_to :group
+- belongs_to :groups
 - belongs_to :user
 
 
