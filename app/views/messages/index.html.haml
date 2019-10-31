@@ -15,25 +15,7 @@
       .right-header
         .right-header__button
           Edit
-    .messages
-      .message
-        .upper-message
-          .upper-message__user-name
-            名前
-          .upper-message__date
-            2019/10/25(Fri)09:00:00
-        .lower-meesage
-          .lower-message__content
-            テスト
-      .message
-        .upper-message
-          .upper-message__user-name
-            名前
-          .upper-message__date
-            2019/10/25(Fri)09:00:00
-        .lower-meesage
-          .lower-message__content
-            テスト
+    
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
