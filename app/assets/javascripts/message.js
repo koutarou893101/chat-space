@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   function buildHTML(message) {
       var insertImage = '';
       if (message.image.url) {
@@ -51,27 +51,29 @@ $(function () {
           alert('メッセージ送信に失敗しました');
       });
   })
+  
   var reloadMessages = function() {
-        last_message_id = $('.message').last().data('id');
-        href = 'api/messages'
+       var last_message_id = $('.message').last().data('id');
+       var href = 'api/messages'
         $.ajax({
         url: href,
-        type: 'GET',
-        data:{id: last_message_id},
+        type: 'get',
+        data: {id: last_message_id},
         dataType: 'json'
-    })
+        })
 
-    .done(function(messages){
+    .done(function(messages) {
       messages.forEach(function(message){
-        var insertHTML = buildHTML(message)
-        $('#message').append(insertHTML)
-      })
-
+      var insertHTML = buildHTML(message)                      
+      $('.messages').append(insertHTML); 
+      scroll_view();
+      });                   
+      
+     })
+       
       .fail(function(){
         alert('自動更新に失敗しました');
     });
-    })
-   setInterval(reloadMessages, 5000);
-  }
-});
-
+  };
+  setInterval(reloadMessages, 5000);
+})
