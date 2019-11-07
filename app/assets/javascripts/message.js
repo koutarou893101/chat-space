@@ -43,7 +43,7 @@ $(function() {
           var html = buildHTML(data);
           $('.messages').append(html);
           scroll_view()
-          $('#message_content').val("");
+          $('#new_message')[0].reset();
           $('.form__textfield').val('');
           $('.form__submit').prop('disabled', false);
       })
