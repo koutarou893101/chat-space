@@ -20,6 +20,7 @@ $(function() {
   function addDeleteUser(name, id) {
     let html = 
      `<div class="chat-group-user clearfix" id="${id}">
+     <input type="hidden" name="group[user_ids][]" value="${id}">
       <p class="chat-group-user__name">${name}</p>
       <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">削除</div>
     </div>`;
