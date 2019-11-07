@@ -41,6 +41,7 @@ $(function() {
       })
       .done(function (data) {
           var html = buildHTML(data);
+          console.log(message);
           $('.messages').append(html);
           scroll_view()
           $('#message_content').val("");
