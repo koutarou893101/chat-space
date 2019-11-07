@@ -27,7 +27,7 @@ $(function() {
     $(".js-add-user").append(html);
   }
   function addMember(user_id) {
-    let html = `<input value="${user_id}" name="group[user_ids][]" type="hidden" id="group_user_ids_${user_id}" />`;
+    var html = `<div class='chat-group-user clearfix'>${ user }</div>`
     $(`#${user_id}`).append(html);
   }
   $("#user-search-field").on("keyup", function() {
